@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Ohouse</string>
+
+    <string name="home">홈</string>
+    <string name="photoFeed">포토피드</string>
+    <string name="signIn">로그인</string>
+    <string name="joinIn">가입</string>
+    <string name="logout">로그아웃</string>
+    <string name="nickname">닉네임</string>
+    <string name="password">비밀번호</string>
+    <string name="pop_card_title">인기 카드: 카드를 클릭해보세요.</string>
+    <string name="recommend_card_title">추천 카드: 카드를 클릭해보세요.</string>
+    <string name="pop_user_title">인기 유저: 유저를 클릭해보세요.</string>
+</resources>

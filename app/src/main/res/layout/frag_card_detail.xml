@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="baseViewModel"
+            type="com.kyg.ohouse.viewmodel.BaseViewModel" />
+
+        <variable
+            name="popCardTitleText"
+            type="String" />
+
+        <variable
+            name="popularCard"
+            type="com.kyg.ohouse.model.PopularCard" />
+
+        <variable
+            name="popularUser"
+            type="com.kyg.ohouse.model.PopularUser" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/cardDetailItemPhotoFeed"
+                layout="@layout/item_photo_feed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popularCard="@{popularCard}" />
+
+            <include
+                android:id="@+id/cardDetailItemUserInfo"
+                layout="@layout/item_pop_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:baseViewModel="@{baseViewModel}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardDetailItemPhotoFeed"
+                app:popularUser="@{popularUser}" />
+
+            <include
+                android:id="@+id/cardDetailItemPopCard"
+                layout="@layout/item_pop_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardDetailItemUserInfo"
+                app:popCardTitleText="@{popCardTitleText}" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
